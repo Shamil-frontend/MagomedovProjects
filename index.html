@@ -1,0 +1,666 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="format-detection" content="telephone=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+      <link rel="stylesheet" href="css/style.min.css"/>
+      <link href="libs/select2/css/select2.min.css" rel="stylesheet" />
+      <style>
+          /* width */
+          ::-webkit-scrollbar {
+              width: 6px;
+              
+          }
+
+          /* Track */
+          ::-webkit-scrollbar-track {
+              box-shadow: inset 0 0 5px rgb(163, 162, 162);  
+              border-radius: 4px;              
+          }
+           
+          /* Slider */
+          ::-webkit-scrollbar-thumb {
+              background: #888; 
+              border-radius: 4px;
+          }
+
+          /* Slider on hover */
+          ::-webkit-scrollbar-thumb:hover {
+              background: rgb(110, 110, 110);
+          }
+       </style>
+      <title>Мои документы</title>
+    </head>
+   <body>
+            
+        <div class="wrrapper">
+            <header class="navbar-custom">
+                <a class="logo" href="/">
+                    <img src="img/icons/logo.svg"></img>
+                </a> 
+                <button class="button-new-appeal" type="button">
+                    <a href="new-appeal.html">
+                        Новое Обрашение <span>+</span>
+                    </a>
+                </button>
+            </header>
+
+            <main class="page-main">
+                <section class="left-filter-menu">
+                    <ul class="filter-list">
+                        <form class="form-filter" action="https://" method="post">
+                            <li class="filter-list-item">
+                                <label  for="branch-mfc">Филиал МФЦ</label>
+                                <select class="js-example-basic-single select2"  id="branch-mfc">
+                                    <optgroup label="Дагестан">
+                                        <option value="today" >Махачкала</option>
+                                        <option value="yesterday">Каспийск</option>
+                                        <option value="three-days">Дербент</option>
+                                    </optgroup>
+                                    <optgroup label="Ингушетия">
+                                        <option value="today" >Махачкала</option>
+                                        <option value="yesterday">Каспийск</option>
+                                        <option value="three-days">Дербент</option>
+                                    </optgroup>
+                                    <optgroup label="Чечня">
+                                        <option value="today" >Махачкала</option>
+                                        <option value="yesterday">Каспийск</option>
+                                        <option value="three-days">Дербент</option>
+                                    </optgroup>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="date-receipt">Дата приема</label>
+                                <select class="js-example-basic-single select2"  id="date-receipt">
+                                    <option value="today" selected>Сегодня</option>
+                                    <option value="yesterday">Вчера</option>
+                                    <option value="three-days">3 дня</option>
+                                    <option value="week">Неделя</option>
+                                    <option value="month">Месяц</option>
+                                    <option value="year">Год</option>
+                                    <option value="all-time">Все время</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="man-accepted">Принял</label>
+                                <select class="js-example-basic-single select2"  id="man-accepted">
+                                    <option selected >ФИО</option>
+                                    <option value="man-accepted">Керимов Сулейман Абусаидович</option>
+                                    <option value="man-accepted">Магомедов Магомедсалам Магомедалиевич</option>
+                                    <option value="man-accepted">Гаджиев Гадис Абдуллаевич</option>
+                                    <option value="man-accepted">Махмудова Такибат Алаудиновна</option>
+                                    <option value="man-accepted">Агасиев Кази Магомед </option>
+                                    <option value="man-accepted">Магомедов Бадрутдин Магомедович</option>
+                                    <option value="man-accepted">Алиев Али Магомедович </option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="executor">Исполнитель</label>
+                                <select class="js-example-basic-single select2"  id="executor">
+                                    <option selected >ФИО</option>
+                                    <option value="man-accepted">Керимов Сулейман Абусаидович</option>
+                                    <option value="man-accepted">Магомедов Магомедсалам Магомедалиевич</option>
+                                    <option value="man-accepted">Гаджиев Гадис Абдуллаевич</option>
+                                    <option value="man-accepted">Махмудова Такибат Алаудиновна</option>
+                                    <option value="man-accepted">Агасиев Кази Магомед</option>
+                                    <option value="man-accepted">Магомедов Бадрутдин Магомедович</option>
+                                    <option value="man-accepted">Алиев Али Магомедович</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="status">Статус</label>
+                                <select class="js-example-basic-single select2"  id="status">
+                                    <option value="today" selected>На исполнении</option>
+                                    <option value="yesterday">Исполнено</option>
+                                    <option value="three-days">Просроченно</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="stage">Этап</label>
+                                <select class="js-example-basic-single select2"  id="stage">
+                                    <option value="today" selected>Принято</option>
+                                    <option value="yesterday">Следующий</option>
+                                    <option value="three-days">Обработан</option>
+                                    <option value="three-days">Передать в ОИВ</option>
+                                    <option value="three-days">Исполнен</option>
+                                    <option value="three-days">Выдать</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="OIV">ОИВ</label>
+                                <select class="js-example-basic-single select2"  id="OIV">
+                                    <option value="today" selected>Минстрой</option>
+                                    <option value="yesterday">Минпром</option>
+                                    <option value="yesterday">Минсельхоз</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item">
+                                <label  for="service">Услуга</label>
+                                <select class="js-example-basic-single select2"  id="service">
+                                    <option value="today" selected>Сегодня</option>
+                                    <option value="yesterday">Вчера</option>
+                                    <option value="three-days">3 дня</option>
+                                    <option value="week">Неделя</option>
+                                    <option value="month">Месяц</option>
+                                    <option value="year">Год</option>
+                                    <option value="all-time">Все время</option>
+                                </select>
+                            </li>
+                            <li class="filter-list-item btn-wrapper">
+                                <button class="button-decline btn-filter" type="button">ОТКЛОНИТЬ</button>
+                                <button class="button-apply btn-filter" type="button">ПРИМЕНИТЬ</button>
+                            </li>
+                         </form>
+                    </ul>
+                </section>
+
+                <section class="content-page">
+                    <div class="content">
+                        <div class="data-table">
+                            <table class="table table-head">
+                                <colgroup>
+                                    <col>
+                                    <col style="width: 240px">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width: 160px">
+                                    <col style="width: 160px">
+                                    <col style="width: 100px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="" for="item">Номер и Дата</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Заявитель</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Адрес</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Телефон</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Услуга</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Статус</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Этап</label>
+                                        </th>
+                                        <th>
+                                            <label class="" for="item">Дни</label>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                         </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                        <th>
+                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                        </th>
+                                    </tr>
+                                </thead>  
+                            </table>
+                            <div class="data-table-body">
+                                <table class="table table-appeal">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 240px">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 160px">
+                                        <col style="width: 160px">
+                                        <col style="width: 100px">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Гамидова, д. 14.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 1</span>
+                                            </td>
+                                            <td>
+                                                <span>На исполнении</span>
+                                            </td>
+                                            <td>
+                                                <span>Принято</span>
+                                            </td>
+                                            <td>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
+                                                <span class="date">23.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Алиев Али Магомедович</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Шамиля, д. 3-А.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8899) 11-53-62</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 3</span>
+                                            </td>
+                                            <td>
+                                                <span>Исполнено</span>
+                                            </td>
+                                            <td>
+                                                <span>Обработан</span>
+                                            </td>
+                                            <td>
+                                                <span class="days grn">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
+                                                <span class="date">1.02.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                            </td>
+                                            <td>
+                                                <span>ул. Даниялова, д. 32</span>
+                                            </td>
+                                            <td>
+                                                <span>(8928) 00-43-44</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 2</span>
+                                            </td>
+                                            <td>
+                                                <span>Просрочено</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдать</span>
+                                            </td>
+                                            <td>
+                                                <span class="days rd">-2</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Гамидова, д. 14.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 1</span>
+                                            </td>
+                                            <td>
+                                                <span>На исполнении</span>
+                                            </td>
+                                            <td>
+                                                <span>Принято</span>
+                                            </td>
+                                            <td>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
+                                                <span class="date">23.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Алиев Али Магомедович</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Шамиля, д. 3-А.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8899) 11-53-62</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 3</span>
+                                            </td>
+                                            <td>
+                                                <span>Исполнено</span>
+                                            </td>
+                                            <td>
+                                                <span>Обработан</span>
+                                            </td>
+                                            <td>
+                                                <span class="days grn">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
+                                                <span class="date">1.02.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                            </td>
+                                            <td>
+                                                <span>ул. Даниялова, д. 32</span>
+                                            </td>
+                                            <td>
+                                                <span>(8928) 00-43-44</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 2</span>
+                                            </td>
+                                            <td>
+                                                <span>Просрочено</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдать</span>
+                                            </td>
+                                            <td>
+                                                <span class="days rd">-2</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Гамидова, д. 14.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 1</span>
+                                            </td>
+                                            <td>
+                                                <span>На исполнении</span>
+                                            </td>
+                                            <td>
+                                                <span>Принято</span>
+                                            </td>
+                                            <td>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
+                                                <span class="date">23.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Алиев Али Магомедович</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Шамиля, д. 3-А.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8899) 11-53-62</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 3</span>
+                                            </td>
+                                            <td>
+                                                <span>Исполнено</span>
+                                            </td>
+                                            <td>
+                                                <span>Обработан</span>
+                                            </td>
+                                            <td>
+                                                <span class="days grn">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
+                                                <span class="date">1.02.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                            </td>
+                                            <td>
+                                                <span>ул. Даниялова, д. 32</span>
+                                            </td>
+                                            <td>
+                                                <span>(8928) 00-43-44</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 2</span>
+                                            </td>
+                                            <td>
+                                                <span>Просрочено</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдать</span>
+                                            </td>
+                                            <td>
+                                                <span class="days rd">-2</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Гамидова, д. 14.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 1</span>
+                                            </td>
+                                            <td>
+                                                <span>На исполнении</span>
+                                            </td>
+                                            <td>
+                                                <span>Принято</span>
+                                            </td>
+                                            <td>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
+                                                <span class="date">23.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Алиев Али Магомедович</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Шамиля, д. 3-А.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8899) 11-53-62</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 3</span>
+                                            </td>
+                                            <td>
+                                                <span>Исполнено</span>
+                                            </td>
+                                            <td>
+                                                <span>Обработан</span>
+                                            </td>
+                                            <td>
+                                                <span class="days grn">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
+                                                <span class="date">1.02.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                            </td>
+                                            <td>
+                                                <span>ул. Даниялова, д. 32</span>
+                                            </td>
+                                            <td>
+                                                <span>(8928) 00-43-44</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 2</span>
+                                            </td>
+                                            <td>
+                                                <span>Просрочено</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдать</span>
+                                            </td>
+                                            <td>
+                                                <span class="days rd">-2</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Гамидова, д. 14.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 1</span>
+                                            </td>
+                                            <td>
+                                                <span>На исполнении</span>
+                                            </td>
+                                            <td>
+                                                <span>Принято</span>
+                                            </td>
+                                            <td>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
+                                                <span class="date">23.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Алиев Али Магомедович</span>
+                                            </td>
+                                            <td>
+                                                <span>пр. Шамиля, д. 3-А.</span>
+                                            </td>
+                                            <td>
+                                                <span>(8899) 11-53-62</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 3</span>
+                                            </td>
+                                            <td>
+                                                <span>Исполнено</span>
+                                            </td>
+                                            <td>
+                                                <span>Обработан</span>
+                                            </td>
+                                            <td>
+                                                <span class="days grn">3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
+                                                <span class="date">1.02.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                            </td>
+                                            <td>
+                                                <span>ул. Даниялова, д. 32</span>
+                                            </td>
+                                            <td>
+                                                <span>(8928) 00-43-44</span>
+                                            </td>
+                                            <td>
+                                                <span>Справка 2</span>
+                                            </td>
+                                            <td>
+                                                <span>Просрочено</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдать</span>
+                                            </td>
+                                            <td>
+                                                <span class="days rd">-2</span>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>  
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+
+        <script src="libs/jquery-3.4.1.slim.min.js"></script>
+        <script src="libs/select2/js/select2.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2();
+            });
+        </script>
+    </body>
+</html>
