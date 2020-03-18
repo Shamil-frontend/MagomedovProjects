@@ -162,81 +162,59 @@
                         <div class="data-table">
                             <table class="table table-head">
                                 <colgroup>
-                                    <col>
-                                    <col style="width: 240px">
-                                    <col>
-                                    <col>
-                                    <col>
-                                    <col style="width: 160px">
-                                    <col style="width: 160px">
-                                    <col style="width: 100px">
+                                    <col class="number-col col">
+                                    <col class="applicant-col col">
+                                    <col class="adress-col col">
+                                    <col class="service-col col">
+                                    <col class="stage-col col">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <label class="" for="item">Номер и Дата</label>
+                                        <th colspan="3">
+                                            <div class="wrapper-search">
+                                                <input class="input-search" id="item" type="search" placeholder="Номер,  Заявитель,  Адресс">
+                                                <svg class="loupe-icon" width="28" height="28"><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="img/sprite.svg#loupe-icon"></use></svg>
+                                            </div>
                                         </th>
                                         <th>
-                                            <label class="" for="item">Заявитель</label>
+                                            
                                         </th>
                                         <th>
-                                            <label class="" for="item">Адрес</label>
-                                        </th>
-                                        <th>
-                                            <label class="" for="item">Телефон</label>
-                                        </th>
-                                        <th>
-                                            <label class="" for="item">Услуга</label>
-                                        </th>
-                                        <th>
-                                            <label class="" for="item">Статус</label>
-                                        </th>
-                                        <th>
-                                            <label class="" for="item">Этап</label>
-                                        </th>
-                                        <th>
-                                            <label class="" for="item">Дни</label>
+                                            
                                         </th>
                                     </tr>
                                     <tr>
                                         <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
+                                            <label class="" >Номер</label>
+                                        </th> 
                                         <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
+                                            <label class="" >Заявитель</label>
+                                        </th> 
                                         <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
+                                            <label class="" >Адрес</label>
+                                        </th> 
                                         <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
+                                            <label class="" >Услуга</label>
+                                        </th> 
                                         <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                         </th>
-                                        <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
-                                        <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
-                                        </th>
-                                        <th>
-                                            <input class="input-search" id="item" type="search" placeholder="Поиск">
+                                            <label class="" >Этап</label>
+                                            <div class="toggler-wrapper">
+                                                <button class="toggler top-tgl"></button>
+                                                <button class="toggler bot-tgl"></button>
+                                            </div>
                                         </th>
                                     </tr>
+                                    
                                 </thead>  
                             </table>
                             <div class="data-table-body">
-                                <table class="table table-appeal">
+                                <table class="table">
                                     <colgroup>
-                                        <col>
-                                        <col style="width: 240px">
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col style="width: 160px">
-                                        <col style="width: 160px">
-                                        <col style="width: 100px">
+                                        <col class="number-col col">
+                                        <col class="applicant-col col">
+                                        <col class="adress-col col">
+                                        <col class="service-col col">
+                                        <col class="stage-col col">
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -246,78 +224,20 @@
                                             </td>
                                             <td>
                                                 <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Гамидова, д. 14.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8722) 68-15-65</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 1</span>
-                                            </td>
-                                            <td>
-                                                <span>На исполнении</span>
-                                            </td>
-                                            <td>
+                                            <td class="cell-relat">
                                                 <span>Принято</span>
-                                            </td>
-                                            <td>
+                                                <span>Алиев М.К.</span>
                                                 <span class="days blu">1</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
-                                                <span class="date">23.01.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Алиев Али Магомедович</span>
-                                            </td>
-                                            <td>
-                                                <span>пр. Шамиля, д. 3-А.</span>
-                                            </td>
-                                            <td>
-                                                <span>(8899) 11-53-62</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 3</span>
-                                            </td>
-                                            <td>
-                                                <span>Исполнено</span>
-                                            </td>
-                                            <td>
-                                                <span>Обработан</span>
-                                            </td>
-                                            <td>
-                                                <span class="days grn">3</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
-                                                <span class="date">1.02.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
-                                            </td>
-                                            <td>
-                                                <span>ул. Даниялова, д. 32</span>
-                                            </td>
-                                            <td>
-                                                <span>(8928) 00-43-44</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 2</span>
-                                            </td>
-                                            <td>
-                                                <span>Просрочено</span>
-                                            </td>
-                                            <td>
-                                                <span>Выдать</span>
-                                            </td>
-                                            <td>
-                                                <span class="days rd">-2</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -327,78 +247,20 @@
                                             </td>
                                             <td>
                                                 <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Гамидова, д. 14.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8722) 68-15-65</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 1</span>
-                                            </td>
-                                            <td>
-                                                <span>На исполнении</span>
-                                            </td>
-                                            <td>
+                                            <td class="cell-relat">
                                                 <span>Принято</span>
-                                            </td>
-                                            <td>
-                                                <span class="days blu">1</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
-                                                <span class="date">23.01.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Алиев Али Магомедович</span>
-                                            </td>
-                                            <td>
-                                                <span>пр. Шамиля, д. 3-А.</span>
-                                            </td>
-                                            <td>
-                                                <span>(8899) 11-53-62</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 3</span>
-                                            </td>
-                                            <td>
-                                                <span>Исполнено</span>
-                                            </td>
-                                            <td>
-                                                <span>Обработан</span>
-                                            </td>
-                                            <td>
-                                                <span class="days grn">3</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
-                                                <span class="date">1.02.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
-                                            </td>
-                                            <td>
-                                                <span>ул. Даниялова, д. 32</span>
-                                            </td>
-                                            <td>
-                                                <span>(8928) 00-43-44</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 2</span>
-                                            </td>
-                                            <td>
-                                                <span>Просрочено</span>
-                                            </td>
-                                            <td>
-                                                <span>Выдать</span>
-                                            </td>
-                                            <td>
-                                                <span class="days rd">-2</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -408,78 +270,20 @@
                                             </td>
                                             <td>
                                                 <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Гамидова, д. 14.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8722) 68-15-65</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 1</span>
-                                            </td>
-                                            <td>
-                                                <span>На исполнении</span>
-                                            </td>
-                                            <td>
+                                            <td class="cell-relat">
                                                 <span>Принято</span>
-                                            </td>
-                                            <td>
-                                                <span class="days blu">1</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
-                                                <span class="date">23.01.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Алиев Али Магомедович</span>
-                                            </td>
-                                            <td>
-                                                <span>пр. Шамиля, д. 3-А.</span>
-                                            </td>
-                                            <td>
-                                                <span>(8899) 11-53-62</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 3</span>
-                                            </td>
-                                            <td>
-                                                <span>Исполнено</span>
-                                            </td>
-                                            <td>
-                                                <span>Обработан</span>
-                                            </td>
-                                            <td>
-                                                <span class="days grn">3</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
-                                                <span class="date">1.02.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
-                                            </td>
-                                            <td>
-                                                <span>ул. Даниялова, д. 32</span>
-                                            </td>
-                                            <td>
-                                                <span>(8928) 00-43-44</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 2</span>
-                                            </td>
-                                            <td>
-                                                <span>Просрочено</span>
-                                            </td>
-                                            <td>
-                                                <span>Выдать</span>
-                                            </td>
-                                            <td>
-                                                <span class="days rd">-2</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -489,78 +293,20 @@
                                             </td>
                                             <td>
                                                 <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Гамидова, д. 14.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8722) 68-15-65</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 1</span>
-                                            </td>
-                                            <td>
-                                                <span>На исполнении</span>
-                                            </td>
-                                            <td>
+                                            <td class="cell-relat">
                                                 <span>Принято</span>
-                                            </td>
-                                            <td>
+                                                <span>Алиев М.К.</span>
                                                 <span class="days blu">1</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
-                                                <span class="date">23.01.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Алиев Али Магомедович</span>
-                                            </td>
-                                            <td>
-                                                <span>пр. Шамиля, д. 3-А.</span>
-                                            </td>
-                                            <td>
-                                                <span>(8899) 11-53-62</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 3</span>
-                                            </td>
-                                            <td>
-                                                <span>Исполнено</span>
-                                            </td>
-                                            <td>
-                                                <span>Обработан</span>
-                                            </td>
-                                            <td>
-                                                <span class="days grn">3</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
-                                                <span class="date">1.02.2020</span>
-                                            </td>
-                                            <td>
-                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
-                                            </td>
-                                            <td>
-                                                <span>ул. Даниялова, д. 32</span>
-                                            </td>
-                                            <td>
-                                                <span>(8928) 00-43-44</span>
-                                            </td>
-                                            <td>
-                                                <span>Справка 2</span>
-                                            </td>
-                                            <td>
-                                                <span>Просрочено</span>
-                                            </td>
-                                            <td>
-                                                <span>Выдать</span>
-                                            </td>
-                                            <td>
-                                                <span class="days rd">-2</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -570,81 +316,321 @@
                                             </td>
                                             <td>
                                                 <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Гамидова, д. 14.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8722) 68-15-65</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 1</span>
-                                            </td>
-                                            <td>
-                                                <span>На исполнении</span>
-                                            </td>
-                                            <td>
+                                            <td class="cell-relat">
                                                 <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
                                             </td>
                                             <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
                                                 <span class="days blu">1</span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a class="item-ref" href="new-appeal.html">02-0000002</a>
-                                                <span class="date">23.01.2020</span>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
                                             </td>
                                             <td>
-                                                <span>Алиев Али Магомедович</span>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>пр. Шамиля, д. 3-А.</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8899) 11-53-62</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 3</span>
-                                            </td>
-                                            <td>
-                                                <span>Исполнено</span>
-                                            </td>
-                                            <td>
-                                                <span>Обработан</span>
-                                            </td>
-                                            <td>
-                                                <span class="days grn">3</span>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a class="item-ref" href="new-appeal.html">03-0000003</a>
-                                                <span class="date">1.02.2020</span>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
                                             </td>
                                             <td>
-                                                <span>Магомедов Магомедсалам Магомедалиевич</span>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
                                             </td>
                                             <td>
-                                                <span>ул. Даниялова, д. 32</span>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
                                             </td>
                                             <td>
-                                                <span>(8928) 00-43-44</span>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
                                             </td>
-                                            <td>
-                                                <span>Справка 2</span>
-                                            </td>
-                                            <td>
-                                                <span>Просрочено</span>
-                                            </td>
-                                            <td>
-                                                <span>Выдать</span>
-                                            </td>
-                                            <td>
-                                                <span class="days rd">-2</span>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
                                             </td>
                                         </tr>
-                                        
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-blu">На исполнении</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days blu">1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-rd">Просроченно</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days rd">-3</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="item-ref" href="new-appeal.html">01-0000001</a>
+                                                <span class="date">20.01.2020</span>
+                                            </td>
+                                            <td>
+                                                <span>Махмудова Такибат Алаудиновна</span>
+                                                <span class="phone-number">(8722) 68-15-65</span>
+                                            </td>
+                                            <td>
+                                                <span>г.Каспийск, ул.Ленина</span>
+                                                <span>дом-№29, д.14</span>
+                                            </td>
+                                            <td>
+                                                <span>Выдача спраки о том, что не работает</span>
+                                                <span class="bg-grn">Исполнено</span>
+                                            </td>
+                                            <td class="cell-relat">
+                                                <span>Принято</span>
+                                                <span>Алиев М.К.</span>
+                                                <span class="days grn">4</span>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>  
